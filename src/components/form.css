@@ -1,0 +1,75 @@
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: space-around;
+  }
+  
+  input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+  }
+  
+  input:focus {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  button {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #005ea6;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  body {
+    background-color: #919a8d; /* cambia el valor a cualquier tono de verde que desees */
+  }
+
+  .contenedor-formularios {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grupo {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column; 
+  }
+
+    .boton {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
