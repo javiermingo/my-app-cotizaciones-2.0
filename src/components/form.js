@@ -42,6 +42,28 @@ function Formulario(props) {
   };
   
   
+  function separarNumeroTelefono(numero) {
+    // Eliminar espacios en blanco y otros caracteres no numéricos
+    const numeros = numero.replace(/\D/g, '');
+  
+    // Dividir en grupos de cuatro dígitos de derecha a izquierda
+    const grupos = [];
+    let grupo = '';
+    for (let i = numeros.length - 1; i >= 0; i--) {
+      grupo = numeros[i] + grupo;
+      if ((numeros.length - i) % 4 === 0) {
+        grupos.unshift(grupo);
+        grupo = '';
+      }
+    }
+    // Agregar el último grupo, si es necesario
+    if (grupo.length > 0) {
+      grupos.unshift(grupo);
+    }
+    
+    // Devolver los grupos de números como una cadena separada por guiones
+    return grupos.join(' ');
+  }
   
   
   
@@ -98,7 +120,7 @@ return (
           </div>
           <div className="input-cuadrado">
             <label>Teléfono:</label>
-            <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+            <input type="text" value={telefono} onChange={(e) => setTelefono(separarNumeroTelefono(e.target.value))} />
           </div>
         </div>
         <div className="grupo">

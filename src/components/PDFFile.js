@@ -14,9 +14,6 @@ function formatearNumero(numero) {
   return partes.join(".");
 }
 
-
-
-
 const styles = StyleSheet.create({
   body: {
     paddingTop: 8,
