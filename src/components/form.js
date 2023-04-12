@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import './form.css';
+import chileanRut from 'chilean-rut';
+
+// function todo_rut(rut) {
+//   if(chileanRut.validate(rut)) {
+//     let verificador = rut % 10;
+//   }
+// }
 
 function Formulario(props) {
   const [razonsocial, setRazonsocial] = useState('');
@@ -18,6 +25,26 @@ function Formulario(props) {
   const [kitTotal, setKitTotal] = useState('');
   const [adhesivosCantidad, setAdhesivosCantidad] = useState('');
   const [adhesivosTotal, setAdhesivosTotal] = useState('');
+
+  const handleChangeRut = (e) => {
+    const newRutLimpio = chileanRut.unformat(e.target.value);
+    // Validar si el valor actual del campo de entrada de texto es un número de RUT válido
+    const isValidRut = chileanRut.validate(newRutLimpio);
+    if (isValidRut) {
+      const digito_verificador = newRutLimpio.charAt(newRutLimpio.length - 1)
+      const sin_digito_verificador = newRutLimpio.slice(0, newRutLimpio.length - 1)
+      const rut_formateado_sin_veri = chileanRut.format(sin_digito_verificador);
+      setRut(rut_formateado_sin_veri+'-'+digito_verificador);
+    } else {
+      // Si el valor no es un RUT válido, mostrar el valor actual sin formato
+      setRut(newRutLimpio);
+    }
+  };
+  
+  
+  
+  
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -53,7 +80,7 @@ return (
           </div>
           <div className="input-cuadrado">
             <label>R.U.T.:</label>
-            <input type="text" value={rut} onChange={(e) => setRut(e.target.value)} />
+            <input type="text" value={rut} onChange={handleChangeRut} />
           </div>
           <div className="input-cuadrado">
             <label>Giro:</label>

@@ -41,7 +41,7 @@ label {
   }
 
   body {
-    background-color: #919a8d; /* cambia el valor a cualquier tono de verde que desees */
+    background-color: #7b8b74; /* cambia el valor a cualquier tono de verde que desees */
   }
 
   .contenedor-formularios {
@@ -56,9 +56,10 @@ label {
  
   .formulario {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
+  
   
   form {
     display: flex;

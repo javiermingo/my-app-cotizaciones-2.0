@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         <Page style={styles.body}>
           <View>
               {/* <Text>Nombre del usuario: {props.datos.nombre}</Text>
-              <Text>Correo electrónico: {props.datos.email}</Text> */}
+              <Text>Correo electrónicooo: {props.datos.email}</Text> */}
               <View style={{ position: 'relative' }}>
                   <Image
                     src={coti_en_blanco}
@@ -82,13 +82,13 @@ const styles = StyleSheet.create({
                   {props.datos.licenciasCantidad}
                 </Text>
                 <Text style={[{ position: 'absolute', top: 388, left: 330 }, styles.text]}>
-                  {props.datos.licenciasTotal}
+                  {formatearNumero(props.datos.licenciasTotal)}
                 </Text>
                 <Text style={[{ position: 'absolute', top: 424, left: 210 }, styles.text]}>
                   {props.datos.kitCantidad}
                 </Text>
                 <Text style={[{ position: 'absolute', top: 424, left: 465 }, styles.text]}>
-                  {'$'+ props.datos.kitTotal}
+                  {'$'+ formatearNumero(props.datos.kitTotal)}
                 </Text>
                 <Text style={[{ position: 'absolute', top: 463, left: 210 }, styles.text]}>
                   {formatearNumero(props.datos.adhesivosCantidad)}

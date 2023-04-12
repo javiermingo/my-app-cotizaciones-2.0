@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <Formulario onFormSubmit={handleFormSubmit} />
-      <PDFDownloadLink document={<PDFFile datos = {datosFormulario} />} filename="FORM">
+      <PDFDownloadLink document={<PDFFile datos = {datosFormulario} />} fileName={`Cot.${datosFormulario.razonsocial}.Rut.${datosFormulario.rut}.${datosFormulario.fecha}.(${datosFormulario.licenciasCantidad})Lic.pdf`}>
       {({loading}) => (loading ? <button>Cargando Documento...</button> : <button>Descargar</button> )}
       </PDFDownloadLink>
       {/* <PDFFile /> */}
