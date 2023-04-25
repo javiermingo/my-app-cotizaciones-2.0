@@ -157,7 +157,7 @@ return (
             <input type="number" defaultValue={0} value={kitCantidad} onChange={(e) => setKitCantidad(e.target.value)} />
           </div>
           <div className="input-cuadrado">
-            <label>Total CLP kits-tarjetas:</label>
+            <label>Precio unitario kits-tarjetas:</label>
             <input type="number" defaultValue={0} value={kitTotal} onChange={(e) => setKitTotal(e.target.value)} />
           </div>
         </div>
@@ -167,7 +167,7 @@ return (
             <input type="number" defaultValue={0} value={adhesivosCantidad} onChange={(e) => setAdhesivosCantidad(e.target.value)} />
           </div>
           <div className="input-cuadrado">
-            <label>Total CLP adhesivos:</label>
+            <label>Precio unitario adhesivos:</label>
             <input type="number" defaultValue={0} value={adhesivosTotal} onChange={(e) => setAdhesivosTotal(e.target.value)} />
           </div>
         </div>

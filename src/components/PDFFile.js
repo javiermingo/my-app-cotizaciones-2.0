@@ -85,13 +85,13 @@ const styles = StyleSheet.create({
                   {props.datos.kitCantidad}
                 </Text>
                 <Text style={[{ position: 'absolute', top: 424, left: 465 }, styles.text]}>
-                  {'$'+ formatearNumero(props.datos.kitTotal)}
+                  {'$'+ formatearNumero(parseInt(props.datos.kitTotal)*parseInt(props.datos.kitCantidad))}
                 </Text>
                 <Text style={[{ position: 'absolute', top: 463, left: 210 }, styles.text]}>
                   {formatearNumero(props.datos.adhesivosCantidad)}
                 </Text>
                 <Text style={[{ position: 'absolute', top: 463, left: 465 }, styles.text]}>
-                  {'$'+ formatearNumero(props.datos.adhesivosTotal)}
+                  {'$'+ formatearNumero(parseInt(props.datos.adhesivosTotal)*parseInt(props.datos.adhesivosCantidad))}
                 </Text>
   
                 <Text style={[{ position: 'absolute', top: 492, left: 465 }, styles.text]}>
