@@ -81,9 +81,6 @@ const styles = StyleSheet.create({
                   {props.datos.telefono}
                 </Text>
 
-                <Text style={[{ position: 'absolute', top: 380, left: 210 }, styles.text]}>
-                  {'01'}
-                </Text>
                 <Text style={[{ position: 'absolute', top: 380, left: 330 }, styles.text]}>
                   {formatearNumero(props.datos.plataformaTotal)}
                 </Text>
