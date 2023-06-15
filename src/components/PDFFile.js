@@ -30,6 +30,12 @@ const styles = StyleSheet.create({
     textAlign: "justify",
     fontWeight: 'bold',
   },
+  textito: {
+    margin: 8,
+    fontSize: 6,
+    textAlign: "justify",
+    fontWeight: 'bold',
+  },
   header: {
     fontSize: 8,
     marginBottom: 8,
@@ -75,30 +81,44 @@ const styles = StyleSheet.create({
                   {props.datos.telefono}
                 </Text>
 
-                <Text style={[{ position: 'absolute', top: 388, left: 210 }, styles.text]}>
+                <Text style={[{ position: 'absolute', top: 380, left: 210 }, styles.text]}>
+                  {'01'}
+                </Text>
+                <Text style={[{ position: 'absolute', top: 380, left: 330 }, styles.text]}>
+                  {formatearNumero(props.datos.plataformaTotal)}
+                </Text>
+                <Text style={[{ position: 'absolute', top: 380, left: 465 }, styles.text]}>
+                {'$'+formatearNumero(parseInt(props.datos.plataformaTotal)*parseInt(props.datos.dolar))}
+                </Text>
+
+
+                <Text style={[{ position: 'absolute', top: 407, left: 210 }, styles.text]}>
                   {props.datos.licenciasCantidad}
                 </Text>
-                <Text style={[{ position: 'absolute', top: 388, left: 330 }, styles.text]}>
+                <Text style={[{ position: 'absolute', top: 407, left: 330 }, styles.text]}>
                   {formatearNumero(props.datos.licenciasTotal)}
                 </Text>
-                <Text style={[{ position: 'absolute', top: 424, left: 210 }, styles.text]}>
+                <Text style={[{ position: 'absolute', top: 435, left: 210 }, styles.text]}>
                   {props.datos.kitCantidad}
                 </Text>
-                <Text style={[{ position: 'absolute', top: 424, left: 465 }, styles.text]}>
+                <Text style={[{ position: 'absolute', top: 435, left: 465 }, styles.text]}>
                   {'$'+ formatearNumero(parseInt(props.datos.kitTotal)*parseInt(props.datos.kitCantidad))}
                 </Text>
-                <Text style={[{ position: 'absolute', top: 463, left: 210 }, styles.text]}>
+                <Text style={[{ position: 'absolute', top: 467, left: 210 }, styles.text]}>
                   {formatearNumero(props.datos.adhesivosCantidad)}
                 </Text>
-                <Text style={[{ position: 'absolute', top: 463, left: 465 }, styles.text]}>
+                <Text style={[{ position: 'absolute', top: 467, left: 465 }, styles.text]}>
                   {'$'+ formatearNumero(parseInt(props.datos.adhesivosTotal)*parseInt(props.datos.adhesivosCantidad))}
                 </Text>
   
                 <Text style={[{ position: 'absolute', top: 492, left: 465 }, styles.text]}>
-                  {'$'+formatearNumero(parseInt(props.datos.kitTotal) + parseInt(props.datos.adhesivosTotal)+parseInt(props.datos.licenciasTotal)*parseInt(props.datos.dolar))}
+                  {'$'+formatearNumero(parseInt(props.datos.kitTotal)*parseInt(props.datos.kitCantidad) + parseInt(props.datos.adhesivosTotal)*parseInt(props.datos.adhesivosCantidad)+parseInt(props.datos.licenciasTotal)*parseInt(props.datos.dolar)+parseInt(props.datos.plataformaTotal)*parseInt(props.datos.dolar))}
                 </Text>
-                <Text style={[{ position: 'absolute', top: 386, left: 465 }, styles.text]}>
+                <Text style={[{ position: 'absolute', top: 407, left: 465 }, styles.text]}>
                   {'$'+formatearNumero(parseInt(props.datos.licenciasTotal)*parseInt(props.datos.dolar))}
+                </Text>
+                <Text style={[{ position: 'absolute', top: 520, left: 465 }, styles.textito]}>
+                  {'*Precios no incluyen IVA'}
                 </Text>
 
                 <Text style={[{ position: 'absolute', top: 570, left: 17 }, styles.text]}>

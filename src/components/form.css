@@ -15,7 +15,7 @@ label {
     outline: none;
     width: 100%;
   }
-  
+
   input:focus {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   }

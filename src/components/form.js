@@ -25,6 +25,7 @@ function Formulario(props) {
   const [kitTotal, setKitTotal] = useState('');
   const [adhesivosCantidad, setAdhesivosCantidad] = useState('');
   const [adhesivosTotal, setAdhesivosTotal] = useState('');
+  const [plataformaTotal, setPlataformaTotal] = useState('');
 
   const handleChangeRut = (e) => {
     const newRutLimpio = chileanRut.unformat(e.target.value);
@@ -86,6 +87,7 @@ function Formulario(props) {
       kitTotal,
       adhesivosCantidad,
       adhesivosTotal,
+      plataformaTotal,
     });
   };
 
@@ -169,6 +171,12 @@ return (
           <div className="input-cuadrado">
             <label>Precio unitario adhesivos:</label>
             <input type="number" defaultValue={0} value={adhesivosTotal} onChange={(e) => setAdhesivosTotal(e.target.value)} />
+          </div>
+        </div>
+        <div className="grupo">
+          <div className="input-cuadrado">
+            <label>Precio Plataforma Agrak:</label>
+            <input type="number" defaultValue={0} value={plataformaTotal} onChange={(e) => setPlataformaTotal(e.target.value)} />
           </div>
         </div>
     </div>
